@@ -1214,7 +1214,9 @@ void lcd_init()
     TWBR = ((F_CPU / I2C_FREQ) - 16)/2*1;
     TWSR = 0x00;
 //lcd_lib_led_color(48,48,60); //Blue
-lcd_lib_led_color(10,60,10); //Green
+//lcd_lib_led_color(10,60,10); //Green
+    lcd_lib_led_color(51,153,255); //SeeMeCNC Blue LED 
+
 
   i2c_led_write(0, 0x80);//MODE1
   i2c_led_write(1, 0x1C);//MODE2

@@ -123,15 +123,17 @@ static void lcd_implementation_init()
    
 	u8g.firstPage();
 	do {
+                         // Below is the standard marlin/reprap default LCD homescreen infos  
+  /*
 			// RepRap init bmp
 			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
 			// Welcome message
 			u8g.setFont(u8g_font_6x10_marlin);
 			u8g.drawStr(62,10,"MARLIN"); 
 			u8g.setFont(u8g_font_5x8);
-			u8g.drawStr(62,19,"V1.0.0 RC2-mm");
+			u8g.drawStr(62,19,"V1.0.1");
 			u8g.setFont(u8g_font_6x10_marlin);
-			u8g.drawStr(62,28,"by ErikZalm");
+			u8g.drawStr(62,28,"GLCD");
 			u8g.drawStr(62,41,"DOGM128 LCD");
 			u8g.setFont(u8g_font_5x8);
 			u8g.drawStr(62,48,"enhancements");
@@ -140,6 +142,28 @@ static void lcd_implementation_init()
 			u8g.drawStr(62,61,"uses u");
 			u8g.drawStr90(92,57,"8");
 			u8g.drawStr(100,61,"glib");
+*/
+
+
+                        // SeeMeCNC LCD homescreen infos
+			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
+			// Welcome message
+			u8g.setFont(u8g_font_6x10_marlin);
+			u8g.drawStr(62,10,"SeeMeCNC"); 
+			u8g.setFont(u8g_font_5x8);
+			u8g.drawStr(62,19,"");
+			u8g.setFont(u8g_font_6x10_marlin);
+			u8g.drawStr(62,28,"ORION Delta");
+			u8g.drawStr(62,41,"");
+			u8g.setFont(u8g_font_5x8);
+			u8g.drawStr(62,48,"FW V1.3");
+			u8g.setFont(u8g_font_5x8);
+			u8g.drawStr(62,55,"");
+			u8g.drawStr(62,61,"seemecnc.com");
+			//u8g.drawStr90(92,57,"8");
+			//u8g.drawStr(100,61,"glib");
+                        delay(125);
+                  
 	   } while( u8g.nextPage() );
 }
 
