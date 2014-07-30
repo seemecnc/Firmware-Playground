@@ -2267,7 +2267,7 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
       #define BLEN_C 2
       #define BLEN_B 1
       #define BLEN_A 0
-      #define SDCARDDETECT -1 //53
+      #define SDCARDDETECT -1//53  enbaling this causes homescreen to hang and messes up menu trees?
       #define SDSS 72
       //encoder rotation values
       #define encrot0 0
