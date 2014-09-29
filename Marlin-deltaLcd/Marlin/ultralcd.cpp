@@ -222,7 +222,7 @@ static void lcd_status_screen()
     if (lcdDrawUpdate)
     {
         lcd_implementation_status_screen();
-        lcd_status_update_delay = 1000;   /* redraw the main screen every second. This is easier then trying keep track of all things that change on the screen */
+        lcd_status_update_delay = 100;   /* redraw the main screen every second. This is easier then trying keep track of all things that change on the screen */
     }
 #ifdef ULTIPANEL
     if (LCD_CLICKED)
