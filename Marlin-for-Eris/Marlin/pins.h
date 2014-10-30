@@ -2250,7 +2250,7 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
     #define MOTOR_CURRENT_PWM_E_PIN 44 //46
     //Motor current PWM conversion, PWM value = MotorCurrentSetting * 255 / range
     #define MOTOR_CURRENT_PWM_RANGE 2000
-    #define DEFAULT_PWM_MOTOR_CURRENT  {350, 350, 1450}  //{x/y, Z, E}
+    #define DEFAULT_PWM_MOTOR_CURRENT  {250, 250, 1250}  //{x/y, Z, E}
     #ifdef MIREGLI
       // Pins for DOGM SPI LCD Support
       #define DOGLCD_A0  38
