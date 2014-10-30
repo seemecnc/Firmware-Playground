@@ -72,8 +72,8 @@ static volatile bool endstop_z_hit=false;
 #ifdef ABORT_ON_ENDSTOP_HIT_FEATURE_ENABLED
 bool abort_on_endstop_hit = false;
 #endif
-#ifdef MOTOR_CURRENT_PWM_XY_PIN
-  int motor_current_setting[3] = DEFAULT_PWM_MOTOR_CURRENT;
+#ifdef MOTOR_CURRENT_PWM_XY_PIN //7
+  int motor_current_setting[3] = DEFAULT_PWM_MOTOR_CURRENT; //7
 #endif
 
 static bool old_x_min_endstop=false;

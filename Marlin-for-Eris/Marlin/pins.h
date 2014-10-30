@@ -2245,12 +2245,12 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
     #define HEATER_BED_PIN 4
     #define FAN_1_PIN 6
     #define PS_ON_PIN 71
-    #define MOTOR_CURRENT_PWM_XY_PIN 44
+    #define MOTOR_CURRENT_PWM_XY_PIN 46 //44
     #define MOTOR_CURRENT_PWM_Z_PIN 45
-    #define MOTOR_CURRENT_PWM_E_PIN 46
+    #define MOTOR_CURRENT_PWM_E_PIN 44 //46
     //Motor current PWM conversion, PWM value = MotorCurrentSetting * 255 / range
     #define MOTOR_CURRENT_PWM_RANGE 2000
-    #define DEFAULT_PWM_MOTOR_CURRENT  {50, 250, 1450}  //{x/y, Z, E}
+    #define DEFAULT_PWM_MOTOR_CURRENT  {350, 350, 1450}  //{x/y, Z, E}
     #ifdef MIREGLI
       // Pins for DOGM SPI LCD Support
       #define DOGLCD_A0  38
@@ -2281,7 +2281,7 @@ DaveX plan for Teensylu/printrboard-type pinouts (ref teensylu & sprinter) for a
     #define E1_ENABLE_PIN       25
     #define E1_MS1_PIN 63
     #define E1_MS2_PIN 64
-    #define DIGIPOTSS_PIN 38
+    #define DIGIPOTSS_PIN -1 //38
     #define DIGIPOT_CHANNELS {4,5,3,0,1} // X Y Z E0 E1 digipot channels to stepper driver mapping
     #define HEATER_0_PIN  9
     #define HEATER_BED_PIN 3
