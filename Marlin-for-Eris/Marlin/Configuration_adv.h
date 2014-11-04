@@ -35,7 +35,7 @@
 // you exit the value by any M109 without F*
 // Also, if the temperature is set to a value <mintemp, it is not changed by autotemp.
 // on an Ultimaker, some initial testing worked with M109 S215 B260 F1 in the start.gcode
-#define AUTOTEMP
+//#define AUTOTEMP
 #ifdef AUTOTEMP
   #define AUTOTEMP_OLDWEIGHT 0.98
 #endif
@@ -47,11 +47,13 @@
 //  extruder run-out prevention.
 //if the machine is idle, and the temperature over MINTEMP, every couple of SECONDS some filament is extruded
 //#define EXTRUDER_RUNOUT_PREVENT
+#ifdef EXTRUDER_RUNOUT_PREVENT
 #define EXTRUDER_RUNOUT_MINTEMP 190
 #define EXTRUDER_RUNOUT_SECONDS 30.
 #define EXTRUDER_RUNOUT_ESTEPS 14. //steps per mm divided by how many mm you want extruded
 #define EXTRUDER_RUNOUT_SPEED 1500.  //extrusion speed in mm/min
 #define EXTRUDER_RUNOUT_EXTRUDE 100
+#endif
 
 //These defines help to calibrate the AD595 sensor in case you get wrong temperature measurements.
 //The measured temperature is defined as "actualTemp = (measuredTemp * TEMP_SENSOR_AD595_GAIN) + TEMP_SENSOR_AD595_OFFSET"
@@ -61,9 +63,9 @@
 //This is for controlling a fan to cool down the stepper drivers
 //it will turn on when any driver is enabled
 //and turn off after the set amount of seconds from last driver being disabled again
-#define CONTROLLERFAN_PIN 6 //Pin used for the fan to cool controller (-1 to disable)
-#define CONTROLLERFAN_SECS -1 //How many seconds, after all motors were disabled, the fan should run
-#define CONTROLLERFAN_SPEED 255  // == full speed
+//#define CONTROLLERFAN_PIN 6 //Pin used for the fan to cool controller (-1 to disable)
+//#define CONTROLLERFAN_SECS -1 //How many seconds, after all motors were disabled, the fan should run
+//#define CONTROLLERFAN_SPEED 255  // == full speed
 
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
@@ -231,8 +233,8 @@
 //default stepper release if idle
 #define DEFAULT_STEPPER_DEACTIVE_TIME 600
 
-#define DEFAULT_MINIMUMFEEDRATE       2.5     // minimum feedrate
-#define DEFAULT_MINTRAVELFEEDRATE     2.5
+#define DEFAULT_MINIMUMFEEDRATE       5     // minimum feedrate
+#define DEFAULT_MINTRAVELFEEDRATE     5
 
 // Feedrates for manual moves along X, Y, Z, E from panel
 #ifdef ULTIPANEL
@@ -285,7 +287,7 @@
 //===========================================================================
 
 //#define CHDK 4        //Pin for triggering CHDK to take a picture see how to use it here http://captain-slow.dk/2014/03/09/3d-printing-timelapses/
-#define CHDK_DELAY 50 //How long in ms the pin should stay HIGH before going LOW again
+//#define CHDK_DELAY 50 //How long in ms the pin should stay HIGH before going LOW again
 
 #define SD_FINISHED_STEPPERRELEASE true  //if sd support and the file is finished: disable steppers?
 #define SD_FINISHED_RELEASECOMMAND "M84 X Y Z E" // You might want to keep the z enabled so your bed stays in place.

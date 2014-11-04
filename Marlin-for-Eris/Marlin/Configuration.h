@@ -21,7 +21,7 @@
 // Make delta curves from many straight lines (linear interpolation).
 // This is a trade-off between visible corners (not enough segments)
 // and processor overload (too many expensive sqrt calls).
-#define DELTA_SEGMENTS_PER_SECOND 200
+#define DELTA_SEGMENTS_PER_SECOND 160
 
 // NOTE NB all values for DELTA_* values MOUST be floating point, so always have a decimal point in them
 
