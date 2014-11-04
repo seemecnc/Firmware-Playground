@@ -272,8 +272,13 @@
 // Microstep setting (Only functional when stepper driver microstep pins are connected to MCU.
 #define MICROSTEP_MODES {16,16,16,16,16} // [1,2,4,8,16]
 
-// Motor Current setting (Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards)
+// Motor Current setting for RAMBo and similar boards.  Only functional when motor driver current ref pins are connected to a digital trimpot on supported boards
 #define DIGIPOT_MOTOR_CURRENT {135,135,135,135,135} // Values 0-255 (RAMBO 135 = ~0.75A, 185 = ~1A)
+
+// Motor Current settings for Mini-RAMBo and other similar boards 
+// Motor current PWM conversion, PWM value = MotorCurrentSetting * 255 / range
+#define MOTOR_CURRENT_PWM_RANGE 2000 
+#define DEFAULT_PWM_MOTOR_CURRENT  {250, 250, 1250}  //{x/y, Z, E}
 
 // uncomment to enable an I2C based DIGIPOT like on the Azteeg X3 Pro
 //#define DIGIPOT_I2C
