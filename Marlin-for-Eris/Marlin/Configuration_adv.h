@@ -278,7 +278,7 @@
 // Motor Current settings for Mini-RAMBo and other similar boards 
 // Motor current PWM conversion, PWM value = MotorCurrentSetting * 255 / range
 #define MOTOR_CURRENT_PWM_RANGE 2000 
-#define DEFAULT_PWM_MOTOR_CURRENT  {250, 250, 1250}  //{x/y, Z, E}
+#define DEFAULT_PWM_MOTOR_CURRENT  {250, 250, 1000}  //{x/y, Z, E}
 
 // uncomment to enable an I2C based DIGIPOT like on the Azteeg X3 Pro
 //#define DIGIPOT_I2C

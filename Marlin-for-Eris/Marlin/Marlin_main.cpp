@@ -468,8 +468,13 @@ void servo_init()
   #endif
 }
 
+int pin6 = 6; //adding code to turn on the cooler fan connected to pin 6 on mini rambo
+
 void setup()
 {
+  pinMode(pin6, OUTPUT); //adding code for cooler fan mini rambo
+  digitalWrite(pin6, HIGH);
+  
   setup_killpin();
   setup_powerhold();
   MYSERIAL.begin(BAUDRATE);
@@ -532,7 +537,7 @@ void setup()
 
 
 void loop()
-{
+{ 
   if(buflen < (BUFSIZE-1))
     get_command();
   #ifdef SDSUPPORT
