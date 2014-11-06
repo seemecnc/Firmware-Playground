@@ -18,6 +18,8 @@
 //#define WATCH_TEMP_PERIOD 40000 //40 seconds
 //#define WATCH_TEMP_INCREASE 10  //Heat up at least 10 degree in 20 seconds
 
+
+/*  REMOVING THIS CODE FOR NOW TO SEE IF IT'S CAUSING SW GLITCHING J.OLY
 #ifdef PIDTEMP
   // this adds an experimental additional term to the heating power, proportional to the extrusion speed.
   // if Kc is chosen well, the additional required power due to increased melting should be compensated.
@@ -26,7 +28,7 @@
     #define  DEFAULT_Kc (1) //heating power=Kc*(e_speed)
   #endif
 #endif
-
+*/
 
 //automatic temperature: The hot end target temperature is calculated by all the buffered lines of gcode.
 //The maximum buffered steps/sec of the extruder motor are called "se".
@@ -215,9 +217,9 @@
 #endif //DUAL_X_CARRIAGE
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
-#define X_HOME_RETRACT_MM 5
-#define Y_HOME_RETRACT_MM 5
-#define Z_HOME_RETRACT_MM 5
+#define X_HOME_RETRACT_MM 10
+#define Y_HOME_RETRACT_MM 10
+#define Z_HOME_RETRACT_MM 10
 //#define QUICK_HOME  //if this is defined, if both x and y are to be homed, a diagonal move will be performed initially.
 
 #define AXIS_RELATIVE_MODES {false, false, false, false}
@@ -247,7 +249,7 @@
 #endif
 
 // minimum time in microseconds that a movement needs to take if the buffer is emptied.
-#define DEFAULT_MINSEGMENTTIME        20000
+#define DEFAULT_MINSEGMENTTIME        50000  //20000 is default
 
 // If defined the movements slow down when the look ahead buffer is only half full
 //#define SLOWDOWN
@@ -404,7 +406,7 @@ const unsigned int dropsegments=5; //everything with less than this number of st
 
 //The ASCII buffer for receiving from the serial:
 #define MAX_CMD_SIZE 96
-#define BUFSIZE 8 // was 4, changed to 8 for eris w/out lcd/sd stuffs
+#define BUFSIZE 4 // was 4, changed to 8 for eris w/out lcd/sd stuffs
 
 
 // Firmware based and LCD controlled retract
