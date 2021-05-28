@@ -69,7 +69,9 @@ M563 P1 D1 H1 F0
 G10 P1 X0 Y0 Z0
 G10 P1 S0 R0
 
-; Custom settings
+; Filament Switch
+M591 D0 P2 C3
+M581 E0:1 S0 T2 C0
 
 ; Miscellaneous
 M575 P1 S1 B57600                                       ; enable support for PanelDue
