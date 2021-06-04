@@ -1,13 +1,14 @@
-; General Settings SeeMeCNC
+; ARTEMIS SeeMeCNC 3D Printers
+; General preferences 
 G90                                                     ; absolute coordinates
 M83                                                     ; relative extruder moves
-M550 P"ARTIMES"                                         ; set printer name
-M665 R150 L339.47 B145 H530                             ; SeeMeCNC 350mm L Carbon Fiber ARMS Set delta radius, diagonal rod length, printable radius and homed height
-;M665 R150 L351.1 B145 H530                              ; SeeMeCNC 350mm L Injection Molded ARMS Set delta radius, diagonal rod length, printable radius and homed height
-M666 X0 Y0 Z0                                           ; delta endstop adjustment
+M550 P"ARTEMIS"                                         ; set printer name
+M665 R150 L339.47 B145 H530                             ; Carbon Fiber ARMS Set delta radius, diagonal rod length, printable radius and homed height
+;M665 R150 L351.1 B145 H530                              ; Injection Molded ARMS Set delta radius, diagonal rod length, printable radius and homed height
+M666 X0 Y0 Z0                                           ; put your endstop adjustments here, or let auto calibration find them
 
 ; Network
-M552 S1                                                 ; enable network, S0 is disable
+M552 S1                                                 ; enable network
 M586 P0 S1                                              ; enable HTTP
 M586 P1 S0                                              ; disable FTP
 M586 P2 S0                                              ; disable Telnet
@@ -37,7 +38,7 @@ M574 Z2 S1 P"zstop"                                     ; configure active-high 
 
 ; Z-Probe
 M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000         ; set Z probe type to switch and the dive height + speeds
-;M558 P5 I1 A2 R0.4 C"^zprobe.in" H20 F1500 T9000        ; set Z probe type to switch and the dive height + speeds
+;M558 P5 I0 A2 R0.4 C"!^zprobe.in" H20 F1500 T9000       ; set Z probe type to switch and the dive height + speeds
 G31 P500 X0 Y0 Z-0.2                                    ; set Z probe trigger value, offset and trigger height
 M557 R145 S30                                           ; define mesh grid
 
@@ -45,7 +46,7 @@ M557 R145 S30                                           ; define mesh grid
 M308 S0 P"bedtemp" Y"thermistor" T100000 B4725 C7.06e-8 ; configure sensor 0 as thermistor on pin bed temp
 M950 H0 C"bedheat" T0                                   ; create bed heater output on bed heat and map it to sensor 0
 M307 H0 R0.245 C774.3 D25.92 S1.00 V12.9                ; Bed Heater Process Parameters
-M140 H0                                                 ; map bed heater to heater zero
+M140 H0                                                 ; map heated bed to heater 0
 M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
 
 ; Hotend Heater
@@ -70,9 +71,10 @@ M563 P1 D1 H1 F0
 G10 P1 X0 Y0 Z0
 G10 P1 S0 R0
 
-; Filament Switch
-M591 D0 P2 C3
-M581 E0:1 S0 T2 C0
+;Filament Runout Sensor
+M950 J0 C"!^e0Stop"                                     ; create switch pin
+M950 J1 C"!^e1stop"                                     ; create switch pin
+M581 P0:1 T2 S1 R1                                      ; run trigger2.g to pause if filament has run out during SD card printing
 
 ; Miscellaneous
 M575 P1 S1 B57600                                       ; enable support for PanelDue
