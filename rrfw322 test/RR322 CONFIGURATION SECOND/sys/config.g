@@ -38,7 +38,7 @@ M574 Z2 S1 P"zstop"                                     ; configure active-high 
 
 ; Z-Probe
 M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000         ; set Z probe type to switch and the dive height + speeds
-;M558 P5 I0 A2 R0.4 C"!^zprobe.in" H20 F1500 T9000       ; set Z probe type to switch and the dive height + speeds
+;M558 P5 I0 A2 R0.4 C"!^zprobe.in" H20 F1000 T9000       ; set Z probe type to switch and the dive height + speeds
 G31 P500 X0 Y0 Z-0.2                                    ; set Z probe trigger value, offset and trigger height
 M557 R145 S30                                           ; define mesh grid
 
