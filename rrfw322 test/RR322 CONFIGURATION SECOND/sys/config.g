@@ -1,13 +1,13 @@
-; General preferences
+; General Settings SeeMeCNC
 G90                                                     ; absolute coordinates
 M83                                                     ; relative extruder moves
-M550 P"LAB1"                                         ; set printer name
-M665 R150 L339.47 B145 H530                             ; Carbon Fiber ARMS Set delta radius, diagonal rod length, printable radius and homed height
-;M665 R150 L351.1 B145 H530                              ; Injection Molded ARMS Set delta radius, diagonal rod length, printable radius and homed height
-M666 X0 Y0 Z0                                           ; put your endstop adjustments here, or let auto calibration find them
+M550 P"ARTIMES"                                         ; set printer name
+M665 R150 L339.47 B145 H530                             ; SeeMeCNC 350mm L Carbon Fiber ARMS Set delta radius, diagonal rod length, printable radius and homed height
+;M665 R150 L351.1 B145 H530                              ; SeeMeCNC 350mm L Injection Molded ARMS Set delta radius, diagonal rod length, printable radius and homed height
+M666 X0 Y0 Z0                                           ; delta endstop adjustment
 
 ; Network
-M552 S1                                                 ; enable network
+M552 S1                                                 ; enable network, S0 is disable
 M586 P0 S1                                              ; enable HTTP
 M586 P1 S0                                              ; disable FTP
 M586 P2 S0                                              ; disable Telnet
@@ -24,7 +24,7 @@ M92 X200.00 Y200.00 Z200.00 E182.00:182.00              ; set steps per mm
 M566 X700.00 Y700.00 Z700.00 E2000.00:2000.00           ; set maximum instantaneous speed changes (mm/min)
 M203 X10000.00 Y10000.00 Z10000.00 E9000.00:9000.00     ; set maximum speeds (mm/min)
 M201 X1400.00 Y1400.00 Z1400.00 E5000.00:5000.00        ; set accelerations (mm/s^2)
-M906 X1500 Y1500 Z1500 E1700:1700 I40                   ; set motor currents (mA) and motor idle factor in per cent
+M906 X1500 Y1500 Z1500 E1600:1600 I40                   ; set motor currents (mA) and motor idle factor in per cent
 M84 S30                                                 ; Set idle timeout
 
 ; Axis Limits
@@ -36,7 +36,8 @@ M574 Y2 S1 P"ystop"                                     ; configure active-high 
 M574 Z2 S1 P"zstop"                                     ; configure active-high endstop for high end on Z via pin zstop
 
 ; Z-Probe
-M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000        ; set Z probe type to switch and the dive height + speeds
+M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000         ; set Z probe type to switch and the dive height + speeds
+;M558 P5 I1 A2 R0.4 C"^zprobe.in" H20 F1500 T9000        ; set Z probe type to switch and the dive height + speeds
 G31 P500 X0 Y0 Z-0.2                                    ; set Z probe trigger value, offset and trigger height
 M557 R145 S30                                           ; define mesh grid
 
@@ -44,7 +45,7 @@ M557 R145 S30                                           ; define mesh grid
 M308 S0 P"bedtemp" Y"thermistor" T100000 B4725 C7.06e-8 ; configure sensor 0 as thermistor on pin bed temp
 M950 H0 C"bedheat" T0                                   ; create bed heater output on bed heat and map it to sensor 0
 M307 H0 R0.245 C774.3 D25.92 S1.00 V12.9                ; Bed Heater Process Parameters
-M140 H0                                                 ; map heated bed to heater 0
+M140 H0                                                 ; map bed heater to heater zero
 M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
 
 ; Hotend Heater

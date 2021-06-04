@@ -1,11 +1,8 @@
-; File "0:/gcodes/factory/SeeMeCNC SINGLE Testing Wheel.gcode" resume print after print paused at 2021-05-27 11:20
+; File "0:/gcodes/factory/SeeMeCNC DUAL Testing Wheel.gcode" resume print after print paused at 2021-05-28 15:12
 G21
 M140 P0 S60.0
-; Delta parameters
-M665 L339.470:339.470:339.470 R149.714 H542.313 B145.0 X-0.442 Y-0.428 Z0.000
-M666 X-0.256 Y-0.060 Z0.315 A0.00 B0.00
 T-1 P0
-G92 X-34.838 Y26.711 Z0.300
+G92 X87.943 Y-79.123 Z0.300
 G60 S1
 G10 P1 S0 R0
 G10 P0 S205 R205
@@ -31,11 +28,11 @@ M106 P1 S0.80
 M116
 G92 E0.00000
 M83
-M23 "0:/gcodes/factory/SeeMeCNC SINGLE Testing Wheel.gcode"
-M26 S79021
+M23 "0:/gcodes/factory/SeeMeCNC DUAL Testing Wheel.gcode"
+M26 S20558
 G0 F6000 Z2.300
-G0 F6000 X-34.838 Y26.711
+G0 F6000 X87.943 Y-79.123
 G0 F6000 Z0.300
-G1 F4860.0 P0
+G1 F2700.0 P0
 G21
 M24
