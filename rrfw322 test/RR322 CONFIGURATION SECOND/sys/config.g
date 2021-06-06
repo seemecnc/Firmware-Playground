@@ -38,7 +38,7 @@ M574 Z2 S1 P"zstop"                                     ; configure active-high 
 
 ; Z-Probe
 M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000         ; set Z probe type to switch and the dive height + speeds
-;M558 P5 I1 A2 R0.4 C"!^zprobe.in" H20 F200 T9000       ; set Z probe type to switch and the dive height + speeds
+;M558 P5 I1 A2 R0.4 C"!^zprobe.in" H20 F200 T9000        ; set Z probe type to switch and the dive height + speeds
 G31 P500 X0 Y0 Z-0.2                                    ; set Z probe trigger value, offset and trigger height
 M557 R145 S30                                           ; define mesh grid
 
@@ -52,7 +52,7 @@ M143 H0 S120                                            ; set temperature limit 
 ; Hotend Heater
 M308 S1 P"e0temp" Y"thermistor" T100000 B4725 C7.06e-8  ; configure sensor 1 as thermistor on pin e0temp
 M950 H1 C"e0heat" T1                                    ; create nozzle heater output on e0heat and map it to sensor 1
-M307 H1 R4.044 C104.5 D4.80 S1.00 V12.7                 ; Hotend Heater Process Parameters
+M307 H1 R2.800 C109.1 D5.12 S1.00 V13.0                 ; Hotend Heater Process Parameters
 M143 H1 S280                                            ; Hotend Max Temp
 
 ; Fans
