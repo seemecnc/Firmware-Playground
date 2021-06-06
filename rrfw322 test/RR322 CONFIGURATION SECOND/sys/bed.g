@@ -1,7 +1,7 @@
 ; bed.g
-; called to perform automatic delta calibration via G32
+; called by G32 to perform auto calibration
 ;
-G28
+G28                                         ; home
 M117 Heating Bed Please Wait                ; display message
 M190 S70                                    ; bed preheat temperature
 M104 S0                                     ; hotend off
