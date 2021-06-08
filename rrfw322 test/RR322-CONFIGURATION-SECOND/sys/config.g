@@ -1,11 +1,14 @@
-; ARTEMIS SeeMeCNC 3D Printers
+; SeeMeCNC 3D Printers
 ; General preferences 
 G90                                                     ; absolute coordinates
 M83                                                     ; relative extruder moves
-M550 P"ARTEMIS"                                         ; set printer name
-M665 R150 L339.47 B145 H530                             ; Carbon Fiber ARMS Set delta radius, diagonal rod length, printable radius and homed height
-;M665 R150 L351.1 B145 H530                              ; Injection Molded ARMS Set delta radius, diagonal rod length, printable radius and homed height
-M666 X0 Y0 Z0                                           ; put your endstop adjustments here, or let auto calibration find them
+
+; Only remove ONE semi-colon for ONE printer configuration
+M550 P"ARTEMIS"                                         ; set printer name (ARTEMIS, RostockMAX, BOSSdelta, SeeMeCNC, BestFriend, etc.)
+M665 R150 L339.47 B145 H530                             ; ARTEMIS Carbon Fiber ARMS (R delta radius, L diagonal rod length, B printable radius, H homed height default)
+;M665 R150 L351.1 B145 H530                              ; ARTEMIS Injection Molded ARMS 
+
+M666 X0 Y0 Z0                                           ; endstop adjustment (this is set by autocalibration leveling)
 
 ; Network
 M552 S1                                                 ; enable network
@@ -37,10 +40,10 @@ M574 Y2 S1 P"ystop"                                     ; configure active-high 
 M574 Z2 S1 P"zstop"                                     ; configure active-high endstop for high end on Z via pin zstop
 
 ; Z-Probe
-M558 P5 I0 A2 R0.4 C"zprobe.in" H20 F1500 T9000         ; set Z probe type to switch and the dive height + speeds
-;M558 P5 I1 A2 R0.4 C"!^zprobe.in" H20 F200 T9000        ; set Z probe type to switch and the dive height + speeds
+M558 P5 I0 A4 R0.4 C"zprobe.in" H5 F1500 T6000         ; HOTEND PROBEset Z probe type to switch and the dive height + speeds
+;M558 P5 I1 A4 R0.4 C"!^zprobe.in" H5 F250 T6000        ; FSR PROBE set Z probe type to switch and the dive height + speeds
 G31 P500 X0 Y0 Z-0.2                                    ; set Z probe trigger value, offset and trigger height
-M557 R145 S30                                           ; define mesh grid
+M557 R140 S30                                           ; define mesh grid
 
 ; Bed Heater
 M308 S0 P"bedtemp" Y"thermistor" T100000 B4725 C7.06e-8 ; configure sensor 0 as thermistor on pin bed temp
