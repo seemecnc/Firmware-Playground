@@ -1,0 +1,90 @@
+{
+    "name": "SeeMeCNC",
+    "version":  "02.03.00.03",
+    "force_update": "0",
+    "description": "SeeMeCNC configurations",
+    "machine_model_list": [
+        {
+            "name": "SeeMeCNC BOSSdelta 300",
+            "sub_path": "machine/SeeMeCNC BOSSdelta 300.json"
+		},
+		{
+            "name": "SeeMeCNC Artemis 300",
+            "sub_path": "machine/SeeMeCNC Artemis 300.json"
+        }
+    ],
+    "process_list": [
+        {
+            "name": "fdm_process_common",
+            "sub_path": "process/fdm_process_common.json"
+        },
+        {
+            "name": "0.20mm 04noz PETG @SeeMeCNC",
+            "sub_path": "process/0.20mm 04noz PETG @SeeMeCNC.json"
+        },
+        {
+            "name": "0.24mm 07noz PETG @SeeMeCNC",
+            "sub_path": "process/0.24mm 07noz PETG @SeeMeCNC.json"
+        }
+    ],
+    "filament_list": [
+		{
+            "name": "fdm_filament_common",
+            "sub_path": "filament/fdm_filament_common.json"
+        },
+        {
+            "name": "SeeMeCNC 04noz PLA",
+            "sub_path": "filament/SeeMeCNC 04noz PLA.json"
+        },
+        {
+            "name": "SeeMeCNC 05noz PLA",
+            "sub_path": "filament/SeeMeCNC 05noz PLA.json"
+        },
+        {
+            "name": "SeeMeCNC 07noz PLA",
+            "sub_path": "filament/SeeMeCNC 07noz PLA.json"
+        },
+        {
+            "name": "SeeMeCNC 10noz PLA",
+            "sub_path": "filament/SeeMeCNC 10noz PLA.json"
+        },
+        {
+            "name": "SeeMeCNC 04noz PETG",
+            "sub_path": "filament/SeeMeCNC 04noz PETG.json"
+        },
+        {
+            "name": "SeeMeCNC 05noz PETG",
+            "sub_path": "filament/SeeMeCNC 05noz PETG.json"
+        },
+        {
+            "name": "SeeMeCNC 07noz PETG",
+            "sub_path": "filament/SeeMeCNC 07noz PETG.json"
+        },
+        {
+            "name": "SeeMeCNC 10noz PETG",
+            "sub_path": "filament/SeeMeCNC 10noz PETG.json"
+        }            
+    ],
+    "machine_list": [
+        {
+            "name": "fdm_machine_common",
+            "sub_path": "machine/fdm_machine_common.json"
+        },
+        {
+            "name": "SeeMeCNC BOSSdelta 300 0.4 noz",
+            "sub_path": "machine/SeeMeCNC BOSSdelta 300 0.4 noz.json"
+        },
+        {
+            "name": "SeeMeCNC BOSSdelta 300 0.5 noz",
+            "sub_path": "machine/SeeMeCNC BOSSdelta 300 0.5 noz.json"
+        },
+        {
+            "name": "SeeMeCNC BOSSdelta 300 0.4 noz",
+            "sub_path": "machine/SeeMeCNC Artemis 300 0.4 noz.json"
+        },
+        {
+            "name": "SeeMeCNC BOSSdelta 300 0.5 noz",
+            "sub_path": "machine/SeeMeCNC Artemis 300 0.5 noz.json"
+        }
+    ]
+}

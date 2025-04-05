@@ -1,0 +1,106 @@
+{
+    "type": "filament",
+	"filament_id": "GFL002",
+	"setting_id": "GFSL002",
+    "name": "SeeMeCNC 05noz PLA",
+    "from": "system",
+	"filament_settings_id": "SeeMeCNC 05noz PLA",
+	"instantiation": "true",
+    "inherits": "fdm_filament_common",
+    "compatible_printers": [],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "fan_cooling_layer_time": [
+        "70"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "filament_density": [
+        "1.24"
+    ],
+    "filament_deretraction_speed": [
+        "60"
+    ],
+    "filament_flow_ratio": [
+        "1"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
+    ],
+    "filament_retract_before_wipe": [
+        "20%"
+    ],
+    "filament_retract_lift_above": [
+        "0"
+    ],
+    "filament_retract_lift_below": [
+        "0"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retract_restart_extra": [
+        "1"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "5"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1"
+    ],
+    "filament_retraction_speed": [
+        "90"
+    ],
+    "filament_shrink": [
+        "99.5%"
+    ],
+    "filament_shrinkage_compensation_z": [
+        "99.5%"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "3"
+    ],
+    "filament_z_hop": [
+        "1"
+    ],
+    "filament_z_hop_types": [
+        "Normal Lift"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "nozzle_temperature": [
+        "200"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "200"
+    ],
+    "pressure_advance": [
+        "1.1"
+    ],
+    "slow_down_layer_time": [
+        "10"
+    ],
+        "compatible_printers": [
+		"SeeMeCNC Artemis 300 0.4 noz";
+		"SeeMeCNC Artemis 300 0.5 noz";
+		"SeeMeCNC Artemis 300 0.7 noz";
+		"SeeMeCNC Artemis 300 1.0 noz";
+		"SeeMeCNC BOSSdelta 300 0.4 noz",
+		"SeeMeCNC BOSSdelta 300 0.5 noz",
+		"SeeMeCNC BOSSdelta 300 0.7 noz",
+		"SeeMeCNC BOSSdelta 300 1.0 noz"
+	],
+	"version": "2.3.0.0"
+}

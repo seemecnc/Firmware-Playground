@@ -1,0 +1,12 @@
+{
+    "type": "machine_model",
+    "name": "SeeMeCNC BOSSdelta 300",
+    "model_id": "SeeMeCNC-BOSSdelta-300",
+    "nozzle_diameter": "0.4;0.5;0.7;1.0",
+    "machine_tech": "FFF",
+    "family": "SeeMeCNC",
+    "bed_model": "SeeMeCNC_BOSSdelta300_buildplate_model.stl",
+    "bed_texture": "SeeMeCNC_BOSSdelta300_buildplate_texture.png",
+    "hotend_model": "",
+    "default_materials": "SeeMeCNC Generic PLA @SeeMeCNC;SeeMeCNC Generic PETG @SeeMeCNC;Generic ABS @System;Generic PLA @System;Generic PLA-CF @System;Generic PETG @System;Generic TPU @System;Generic ASA @System;Generic PC @System;Generic PVA @System;Generic PA @System;Generic PA-CF @System"
+}
