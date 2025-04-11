@@ -93,10 +93,10 @@
         "10"
     ],
         "compatible_printers": [
-		"SeeMeCNC Artemis 300 0.4 noz";
-		"SeeMeCNC Artemis 300 0.5 noz";
-		"SeeMeCNC Artemis 300 0.7 noz";
-		"SeeMeCNC Artemis 300 1.0 noz";
+		"SeeMeCNC Artemis 300 0.4 noz",
+		"SeeMeCNC Artemis 300 0.5 noz",
+		"SeeMeCNC Artemis 300 0.7 noz",
+		"SeeMeCNC Artemis 300 1.0 noz",
 		"SeeMeCNC BOSSdelta 300 0.4 noz",
 		"SeeMeCNC BOSSdelta 300 0.5 noz",
 		"SeeMeCNC BOSSdelta 300 0.7 noz",

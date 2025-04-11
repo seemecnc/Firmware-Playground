@@ -27,44 +27,7 @@
             "sub_path": "process/0.24mm 07noz PETG @SeeMeCNC.json"
         }
     ],
-    "filament_list": [
-		{
-            "name": "fdm_filament_common",
-            "sub_path": "filament/fdm_filament_common.json"
-        },
-        {
-            "name": "SeeMeCNC 04noz PLA",
-            "sub_path": "filament/SeeMeCNC 04noz PLA.json"
-        },
-        {
-            "name": "SeeMeCNC 05noz PLA",
-            "sub_path": "filament/SeeMeCNC 05noz PLA.json"
-        },
-        {
-            "name": "SeeMeCNC 07noz PLA",
-            "sub_path": "filament/SeeMeCNC 07noz PLA.json"
-        },
-        {
-            "name": "SeeMeCNC 10noz PLA",
-            "sub_path": "filament/SeeMeCNC 10noz PLA.json"
-        },
-        {
-            "name": "SeeMeCNC 04noz PETG",
-            "sub_path": "filament/SeeMeCNC 04noz PETG.json"
-        },
-        {
-            "name": "SeeMeCNC 05noz PETG",
-            "sub_path": "filament/SeeMeCNC 05noz PETG.json"
-        },
-        {
-            "name": "SeeMeCNC 07noz PETG",
-            "sub_path": "filament/SeeMeCNC 07noz PETG.json"
-        },
-        {
-            "name": "SeeMeCNC 10noz PETG",
-            "sub_path": "filament/SeeMeCNC 10noz PETG.json"
-        }            
-    ],
+    "filament_list": [],
     "machine_list": [
         {
             "name": "fdm_machine_common",
