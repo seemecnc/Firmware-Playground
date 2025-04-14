@@ -1,0 +1,174 @@
+{
+    "bed_custom_model": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\SeeMeCNC_Artemis300_buildplate_model.STL",
+    "bed_custom_texture": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\SeeMeCNC_Artemis300_buildplate_texture.png",
+    "deretraction_speed": [
+        "0"
+    ],
+    "from": "System",
+    "gcode_flavor": "reprapfirmware",
+    "host_type": "duet",
+    "inherits": "fdm_machine_common",
+    "is_custom_defined": "0",
+    "machine_end_gcode": "M107 T0        ;====== BEGIN OF MACHINE ENDING G-CODE =======\nM104 S0\nM104 S0 T1\nM140 S0\nG92 E0\nG91\nG1 Z0.3 F6000\nG92 E0\nG1 E-4 F500\nG92 E0\nG1 E-155 F5000\nG92 E0\nT0 P0\nM203 Z6000\nG90\nG28            ;======= END OF MACHINE ENDING G-CODE ========",
+    "machine_max_acceleration_e": [
+        "4000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "4000",
+        "20000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "4000",
+        "5000"
+    ],
+    "machine_max_acceleration_travel": [
+        "2000",
+        "20000"
+    ],
+    "machine_max_acceleration_x": [
+        "2000",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "2000",
+        "20000"
+    ],
+    "machine_max_acceleration_z": [
+        "2000",
+        "200"
+    ],
+    "machine_max_jerk_e": [
+        "15",
+        "2.5"
+    ],
+    "machine_max_jerk_x": [
+        "15",
+        "12"
+    ],
+    "machine_max_jerk_y": [
+        "15",
+        "12"
+    ],
+    "machine_max_jerk_z": [
+        "15",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "150",
+        "25"
+    ],
+    "machine_max_speed_x": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "200",
+        "12"
+    ],
+    "machine_start_gcode": "G21           ;======== BEGIN MACHINE START G-CODE ==========\nG90\nM82\nM203 Z12000\nM572 D0:1 S0:0    ; cancel firmware pressure advance \nM107 T0\nM140 S[bed_temperature_initial_layer_single]\nM104 S[nozzle_temperature_initial_layer] T0\nG28\nM190 S[bed_temperature_initial_layer_single]\nM109 S[nozzle_temperature_initial_layer] T0\nG1 X-100 Y-111.8034 Z1 F12000\nG92 E0 \nG1 E157 F5000\nG92 E0\nG1 E5 F500\nG92 E0\nG3 X100 Y-111.8034 I100 J111.8034 Z0.3 E33 F2000\nG92 E0\nG1 E-1 F5000\nG1 X103 Y-111 Z0.\nG1 Z0.1\nG92 E0            ;======== END OF MACHINE START G-CODE ========",
+    "min_layer_height": [
+        "0.08"
+    ],
+    "name": "SeeMeCNC 04noz PETG",
+    "print_host": "10.73.20.57",
+    "printable_area": [
+        "149.429x13.0734",
+        "147.721x26.0472",
+        "144.889x38.8229",
+        "140.954x51.303",
+        "135.946x63.3928",
+        "129.904x75",
+        "122.873x86.0365",
+        "114.907x96.4182",
+        "106.066x106.066",
+        "96.4182x114.907",
+        "86.0365x122.873",
+        "75x129.904",
+        "63.3928x135.946",
+        "51.303x140.954",
+        "38.8229x144.889",
+        "26.0472x147.721",
+        "13.0734x149.429",
+        "9.18485e-15x150",
+        "-13.0734x149.429",
+        "-26.0472x147.721",
+        "-38.8229x144.889",
+        "-51.303x140.954",
+        "-63.3928x135.946",
+        "-75x129.904",
+        "-86.0365x122.873",
+        "-96.4182x114.907",
+        "-106.066x106.066",
+        "-114.907x96.4182",
+        "-122.873x86.0365",
+        "-129.904x75",
+        "-135.946x63.3928",
+        "-140.954x51.303",
+        "-144.889x38.8229",
+        "-147.721x26.0472",
+        "-149.429x13.0734",
+        "-150x1.83697e-14",
+        "-149.429x-13.0734",
+        "-147.721x-26.0472",
+        "-144.889x-38.8229",
+        "-140.954x-51.303",
+        "-135.946x-63.3928",
+        "-129.904x-75",
+        "-122.873x-86.0365",
+        "-114.907x-96.4182",
+        "-106.066x-106.066",
+        "-96.4182x-114.907",
+        "-86.0365x-122.873",
+        "-75x-129.904",
+        "-63.3928x-135.946",
+        "-51.303x-140.954",
+        "-38.8229x-144.889",
+        "-26.0472x-147.721",
+        "-13.0734x-149.429",
+        "-2.75546e-14x-150",
+        "13.0734x-149.429",
+        "26.0472x-147.721",
+        "38.8229x-144.889",
+        "51.303x-140.954",
+        "63.3928x-135.946",
+        "75x-129.904",
+        "86.0365x-122.873",
+        "96.4182x-114.907",
+        "106.066x-106.066",
+        "114.907x-96.4182",
+        "122.873x-86.0365",
+        "129.904x-75",
+        "135.946x-63.3928",
+        "140.954x-51.303",
+        "144.889x-38.8229",
+        "147.721x-26.0472",
+        "149.429x-13.0734",
+        "150x-3.67394e-14"
+    ],
+    "printable_height": "510",
+    "printer_settings_id": "SeeMeCNC 04noz PETG",
+    "retract_before_wipe": [
+        "50%"
+    ],
+    "retraction_length": [
+        "0"
+    ],
+    "retraction_minimum_travel": [
+        "0"
+    ],
+    "retraction_speed": [
+        "0"
+    ],
+    "version": "2.3.0.3",
+    "wipe_distance": [
+        "3"
+    ],
+    "z_hop": [
+        "1"
+    ]
+}
