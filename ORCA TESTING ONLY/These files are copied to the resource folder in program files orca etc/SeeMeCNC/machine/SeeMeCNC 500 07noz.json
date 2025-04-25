@@ -1,0 +1,178 @@
+{
+    "bed_custom_model": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\500size_build_plate.STL",
+    "bed_custom_texture": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\SeeMeCNC_Artemis300_buildplate_texture.png",
+    "deretraction_speed": [
+        "0"
+    ],
+    "from": "User",
+    "gcode_flavor": "reprapfirmware",
+    "host_type": "duet",
+    "inherits": "Voron 2.4 350 0.4 nozzle",
+    "is_custom_defined": "0",
+    "machine_end_gcode": "M107 T0        ;======= BEGIN MACHINE ENDING G-CODE ========\nM104 S0\nM104 S0 T1\nM140 S0\nG92 E0\nG91\nG1 Z0.3 F6000\nG92 E0\nG1 E-7 F1000\nG92 E0\nG1 E-153 F5000\nG92 E0\nT0 P0\nM203 Z6000\nG90\nG28            ;======= END OF MACHINE ENDING G-CODE ========",
+    "machine_max_acceleration_e": [
+        "3000",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "3000",
+        "20000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "3000",
+        "5000"
+    ],
+    "machine_max_acceleration_travel": [
+        "3000",
+        "20000"
+    ],
+    "machine_max_acceleration_x": [
+        "3000",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "3000",
+        "20000"
+    ],
+    "machine_max_acceleration_z": [
+        "3000",
+        "200"
+    ],
+    "machine_max_jerk_e": [
+        "8",
+        "2.5"
+    ],
+    "machine_max_jerk_x": [
+        "15",
+        "12"
+    ],
+    "machine_max_jerk_y": [
+        "15",
+        "12"
+    ],
+    "machine_max_jerk_z": [
+        "15",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "100",
+        "25"
+    ],
+    "machine_max_speed_x": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "200",
+        "12"
+    ],
+    "machine_start_gcode": "G21           ;======== BEGIN MACHINE START G-CODE ==========\nG90\nM82\nM203 Z12000\nM572 D0:1 S0:0        ; cancel any firmware pressure advance \n;M566 X1500.00 Y1500.00 Z1500.00 E4000.00:4000.00          ; max inst speed change (mm/min) aka Jerk\n;M203 X12000.00 Y12000.00 Z12000.00 E9000.00:9000.00   ; maximum speeds (mm/min)\n;M201 X2500.00 Y2500.00 Z2500.00 E5000.00:5000.00          ; accelerations (mm/s^2)\n;M906 X1600 Y1600 Z1600 E1600:1600 I30                             ; motor currents (mA) and motor idle factor in per cent\nM107 T0\nM140 S[bed_temperature_initial_layer_single]\nM104 S[nozzle_temperature_initial_layer] T0\nG28\nM190 S[bed_temperature_initial_layer_single]\nM109 S[nozzle_temperature_initial_layer] T0\nG1 X-100 Y-111.8034 Z1 F12000\nG92 E0 \nG1 E159 F5000\nG92 E0\nG1 E5 F500\nG92 E0\n;G3 X100 Y-111.8034 I100 J111.8034 Z0.3 E39 F2000\nG3 X100 Y-110 I100 J110 Z0.3 E39 F2000\nG92 E0\nG1 E-1 F5000\nG1 X101 Z0\nG1 Z1\nG92 E0            ;======== END OF MACHINE START G-CODE ========",
+    "max_layer_height": [
+        "0.6"
+    ],
+    "name": "SeeMeCNC 500 07noz",
+    "nozzle_diameter": [
+        "0.7"
+    ],
+    "print_host": "10.73.20.20",
+    "printable_area": [
+        "249.547x21.8325",
+        "246.694x43.4989",
+        "241.964x64.8342",
+        "235.393x85.676",
+        "227.03x105.866",
+        "216.939x125.25",
+        "205.198x143.681",
+        "191.894x161.018",
+        "177.13x177.13",
+        "161.018x191.894",
+        "143.681x205.198",
+        "125.25x216.939",
+        "105.866x227.03",
+        "85.676x235.393",
+        "64.8342x241.964",
+        "43.4989x246.694",
+        "21.8325x249.547",
+        "1.53387e-14x250.5",
+        "-21.8325x249.547",
+        "-43.4989x246.694",
+        "-64.8342x241.964",
+        "-85.676x235.393",
+        "-105.866x227.03",
+        "-125.25x216.939",
+        "-143.681x205.198",
+        "-161.018x191.894",
+        "-177.13x177.13",
+        "-191.894x161.018",
+        "-205.198x143.681",
+        "-216.939x125.25",
+        "-227.03x105.866",
+        "-235.393x85.676",
+        "-241.964x64.8342",
+        "-246.694x43.4989",
+        "-249.547x21.8325",
+        "-250.5x3.06774e-14",
+        "-249.547x-21.8325",
+        "-246.694x-43.4989",
+        "-241.964x-64.8342",
+        "-235.393x-85.676",
+        "-227.03x-105.866",
+        "-216.939x-125.25",
+        "-205.198x-143.681",
+        "-191.894x-161.018",
+        "-177.13x-177.13",
+        "-161.018x-191.894",
+        "-143.681x-205.198",
+        "-125.25x-216.939",
+        "-105.866x-227.03",
+        "-85.676x-235.393",
+        "-64.8342x-241.964",
+        "-43.4989x-246.694",
+        "-21.8325x-249.547",
+        "-4.60161e-14x-250.5",
+        "21.8325x-249.547",
+        "43.4989x-246.694",
+        "64.8342x-241.964",
+        "85.676x-235.393",
+        "105.866x-227.03",
+        "125.25x-216.939",
+        "143.681x-205.198",
+        "161.018x-191.894",
+        "177.13x-177.13",
+        "191.894x-161.018",
+        "205.198x-143.681",
+        "216.939x-125.25",
+        "227.03x-105.866",
+        "235.393x-85.676",
+        "241.964x-64.8342",
+        "246.694x-43.4989",
+        "249.547x-21.8325",
+        "250.5x-6.13548e-14"
+    ],
+    "printable_height": "1040",
+    "printer_settings_id": "SeeMeCNC 500 07noz",
+    "retract_before_wipe": [
+        "0%"
+    ],
+    "retraction_length": [
+        "0"
+    ],
+    "retraction_minimum_travel": [
+        "0"
+    ],
+    "retraction_speed": [
+        "0"
+    ],
+    "thumbnails": "48x48/PNG, 300x300/PNG",
+    "version": "0.0.0.0",
+    "wipe_distance": [
+        "0"
+    ],
+    "z_hop": [
+        "1"
+    ]
+}

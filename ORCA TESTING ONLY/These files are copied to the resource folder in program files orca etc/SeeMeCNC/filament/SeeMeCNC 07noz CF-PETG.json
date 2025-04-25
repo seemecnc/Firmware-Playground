@@ -109,7 +109,7 @@
         "nil"
     ],
     "filament_max_volumetric_speed": [
-        "8"
+        "6"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -160,7 +160,7 @@
         "70"
     ],
     "filament_settings_id": [
-        "SeeMeCNC 07noz PETG"
+        "SeeMeCNC 07noz CF-PETG"
     ],
     "filament_shrink": [
         "99.4%"
@@ -225,7 +225,7 @@
         "-1"
     ],
     "is_custom_defined": "0",
-    "name": "SeeMeCNC 07noz PETG",
+    "name": "SeeMeCNC 07noz CF-PETG",
     "nozzle_temperature": [
         "235"
     ],

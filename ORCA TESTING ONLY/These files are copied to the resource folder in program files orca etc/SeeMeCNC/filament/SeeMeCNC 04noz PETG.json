@@ -207,7 +207,7 @@
     "filament_z_hop_types": [
         "Normal Lift"
     ],
-    "from": "System",
+    "from": "User",
     "full_fan_speed_layer": [
         "0"
     ],
@@ -220,7 +220,7 @@
     "idle_temperature": [
         "0"
     ],
-    "inherits": "fdm_filament_common",
+    "inherits": "FLSun Generic PETG",
     "internal_bridge_fan_speed": [
         "-1"
     ],
@@ -289,5 +289,5 @@
     "textured_plate_temp_initial_layer": [
         "80"
     ],
-    "version": "0.0.0.0"
+    "version": "2.3.0.0"
 }
