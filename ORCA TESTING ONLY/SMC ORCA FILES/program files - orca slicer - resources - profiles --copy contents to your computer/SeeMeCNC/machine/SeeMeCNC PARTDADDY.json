@@ -1,0 +1,203 @@
+{
+    "bed_custom_model": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\900mm Diameter Build Plate.STL",
+    "bed_custom_texture": "C:\\\\Program Files\\\\OrcaSlicer\\\\resources\\\\profiles\\\\SeeMeCNC\\\\SeeMeCNC_Artemis300_buildplate_texture.png",
+    "before_layer_change_gcode": "",
+    "deretraction_speed": [
+        "0"
+    ],
+    "disable_m73": "1",
+    "emit_machine_limits_to_gcode": "0",
+    "enable_filament_ramming": "0",
+    "extruder_clearance_height_to_lid": "3000",
+    "fan_speedup_overhangs": "0",
+    "from": "User",
+    "gcode_flavor": "reprapfirmware",
+    "host_type": "repetier",
+    "inherits": "Voron 2.4 350 0.4 nozzle",
+    "is_custom_defined": "0",
+    "layer_change_gcode": "",
+    "machine_end_gcode": "M18 E0             ; disable extruder stepper\nG91                   ; incremental \nG1 Z10 F3000  ; move off print\nG90                   ; absolute\nG1 X0 Y0          ; move to center\n;G28                   ;comment out (turn off) home\n;M84                 ; comment out (turn off) disable all motors",
+    "machine_max_acceleration_e": [
+        "200",
+        "5000"
+    ],
+    "machine_max_acceleration_extruding": [
+        "200",
+        "20000"
+    ],
+    "machine_max_acceleration_retracting": [
+        "200",
+        "5000"
+    ],
+    "machine_max_acceleration_travel": [
+        "200",
+        "20000"
+    ],
+    "machine_max_acceleration_x": [
+        "200",
+        "20000"
+    ],
+    "machine_max_acceleration_y": [
+        "200",
+        "20000"
+    ],
+    "machine_max_acceleration_z": [
+        "200",
+        "200"
+    ],
+    "machine_max_jerk_e": [
+        "5",
+        "2.5"
+    ],
+    "machine_max_jerk_x": [
+        "5",
+        "12"
+    ],
+    "machine_max_jerk_y": [
+        "5",
+        "12"
+    ],
+    "machine_max_jerk_z": [
+        "5",
+        "0.4"
+    ],
+    "machine_max_speed_e": [
+        "200",
+        "25"
+    ],
+    "machine_max_speed_x": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_y": [
+        "200",
+        "200"
+    ],
+    "machine_max_speed_z": [
+        "200",
+        "12"
+    ],
+    "machine_start_gcode": "",
+    "max_layer_height": [
+        "7"
+    ],
+    "min_layer_height": [
+        "1"
+    ],
+    "name": "SeeMeCNC PARTDADDY",
+    "nozzle_diameter": [
+        "4"
+    ],
+    "printable_area": [
+        "448.288x39.2201",
+        "443.163x78.1417",
+        "434.667x116.469",
+        "422.862x153.909",
+        "407.838x190.178",
+        "389.711x225",
+        "368.618x258.109",
+        "344.72x289.254",
+        "318.198x318.198",
+        "289.254x344.72",
+        "258.109x368.618",
+        "225x389.711",
+        "190.178x407.838",
+        "153.909x422.862",
+        "116.469x434.667",
+        "78.1417x443.163",
+        "39.2201x448.288",
+        "2.75545e-14x450",
+        "-39.2201x448.288",
+        "-78.1417x443.163",
+        "-116.469x434.667",
+        "-153.909x422.862",
+        "-190.178x407.838",
+        "-225x389.711",
+        "-258.109x368.618",
+        "-289.254x344.72",
+        "-318.198x318.198",
+        "-344.72x289.254",
+        "-368.618x258.109",
+        "-389.711x225",
+        "-407.838x190.178",
+        "-422.862x153.909",
+        "-434.667x116.469",
+        "-443.163x78.1417",
+        "-448.288x39.2201",
+        "-450x5.51091e-14",
+        "-448.288x-39.2201",
+        "-443.163x-78.1417",
+        "-434.667x-116.469",
+        "-422.862x-153.909",
+        "-407.838x-190.178",
+        "-389.711x-225",
+        "-368.618x-258.109",
+        "-344.72x-289.254",
+        "-318.198x-318.198",
+        "-289.254x-344.72",
+        "-258.109x-368.618",
+        "-225x-389.711",
+        "-190.178x-407.838",
+        "-153.909x-422.862",
+        "-116.469x-434.667",
+        "-78.1417x-443.163",
+        "-39.2201x-448.288",
+        "-8.26636e-14x-450",
+        "39.2201x-448.288",
+        "78.1417x-443.163",
+        "116.469x-434.667",
+        "153.909x-422.862",
+        "190.178x-407.838",
+        "225x-389.711",
+        "258.109x-368.618",
+        "289.254x-344.72",
+        "318.198x-318.198",
+        "344.72x-289.254",
+        "368.618x-258.109",
+        "389.711x-225",
+        "407.838x-190.178",
+        "422.862x-153.909",
+        "434.667x-116.469",
+        "443.163x-78.1417",
+        "448.288x-39.2201",
+        "450x-1.10218e-13"
+    ],
+    "printable_height": "3000",
+    "printer_settings_id": "SeeMeCNC PARTDADDY",
+    "purge_in_prime_tower": "0",
+    "retract_before_wipe": [
+        "0%"
+    ],
+    "retract_length_toolchange": [
+        "0"
+    ],
+    "retract_on_top_layer": [
+        "0"
+    ],
+    "retract_when_changing_layer": [
+        "0"
+    ],
+    "retraction_length": [
+        "0.01"
+    ],
+    "retraction_minimum_travel": [
+        "0"
+    ],
+    "retraction_speed": [
+        "0"
+    ],
+    "single_extruder_multi_material": "0",
+    "support_multi_bed_types": "1",
+    "thumbnails": "",
+    "use_relative_e_distances": "0",
+    "version": "0.0.0.0",
+    "wipe": [
+        "0"
+    ],
+    "wipe_distance": [
+        "0"
+    ],
+    "z_hop": [
+        "1"
+    ]
+}
